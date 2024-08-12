@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxPayroll - Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <p>Welcome, {{ user.username }}!</p>
+
+    <!-- Add sections for managing company details, employees, payroll, etc. -->
+    <h2>Your Company</h2>
+    <!-- Company details form goes here -->
+
+    <h2>Employees</h2>
+    <!-- Employee management form or list goes here -->
+
+    <h2>Payroll</h2>
+    <!-- Payroll management section goes here -->
+
+    <p><a href="{% url 'account_logout' %}">Logout</a></p>
+</body>
+</html>

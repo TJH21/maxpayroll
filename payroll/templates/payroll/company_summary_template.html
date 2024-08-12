@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Summary</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; }
+        .header { text-align: center; }
+        .summary table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .summary th, .summary td { border: 1px solid #ddd; padding: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>{{ company.name }} Payroll Summary</h1>
+            <p>Date: {{ run_date }}</p>
+        </div>
+        <div class="summary">
+            <table>
+                <tr>
+                    <th>Total Gross Pay</th>
+                    <td>£{{ total_gross }}</td>
+                </tr>
+                <tr>
+                    <th>Total Tax Deduction</th>
+                    <td>£{{ total_tax }}</td>
+                </tr>
+                <tr>
+                    <th>Total NI Deduction</th>
+                    <td>£{{ total_ni }}</td>
+                </tr>
+                <tr>
+                    <th>Total Pension Contribution</th>
+                    <td>£{{ total_pension }}</td>
+                </tr>
+                <tr>
+                    <th>Total Deductions</th>
+                    <td>£{{ total_deductions }}</td>
+                </tr>
+                <tr>
+                    <th>Total Net Pay</th>
+                    <td>£{{ total_net }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% load static %}  <!-- Add this line at the top of your template -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MaxPayroll</title>
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'home/images/logo.png' %}" alt="MaxPayroll Logo">
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'register' %}">Register</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome-message">
+            <h1>Welcome to MaxPayroll</h1>
+            <p>Please <a href="{% url 'login' %}">log in</a> or <a href="{% url 'register' %}">register</a> to access your dashboard.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MaxPayroll. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'home/js/script.js' %}"></script>
+</body>
+</html>
